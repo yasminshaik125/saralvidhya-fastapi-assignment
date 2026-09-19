@@ -10,12 +10,27 @@ import os
 import uuid
 import re
 from io import BytesIO
+from dotenv import load_dotenv
 
 # PDF and OCR libraries
 from pypdf import PdfReader
 import fitz
 import pytesseract
 from PIL import Image
+
+
+# ==========================================
+# Load environment variables
+# ==========================================
+
+load_dotenv()
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+
+if not SECRET_KEY:
+    raise RuntimeError(
+        "SECRET_KEY is not set. Please create a .env file."
+    )
 
 
 # ==========================================
@@ -88,7 +103,6 @@ pwd_context = CryptContext(
 # JWT settings
 # ==========================================
 
-SECRET_KEY = "saralvidhya-secret-key"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
