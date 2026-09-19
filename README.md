@@ -320,6 +320,3 @@ The Swagger interface can be used to register a user, authenticate, upload a PDF
 **Yasmin Shaik**
 
 B.Tech – Computer Science and Engineering
-**Yasmin Shaik**
-
-B.Tech – Computer Science and Engineering
